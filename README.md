@@ -29,5 +29,11 @@ We welcome contributions to this project! Here's how you can help:
 5. Open a Pull Request.
 
 ---
+## 📞 Contact
+For questions, feedback, or support, feel free to reach out:
+
+- **Email**: [tonylvan77@gmail.com](mailto:tonylvan77@gmail.com)
+- **Paypal Email**: [antonywanjiru7777@gmail.com](mailto:antonywanjiru7777@gmail.com)
+
 
 Stay tuned for updates on this exciting project! Feedback and suggestions are always welcome.
