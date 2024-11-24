@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Mangement WebApp</title>
+    <style>
+        /* Your existing styles */
+        dialog {
+            padding: 2rem;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+        }
+
+        dialog h3 {
+            margin: 0 0 1.5rem 0;
+            color: #333;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        #resetEmailForm {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #resetEmailForm input[type="email"] {
+            padding: 12px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        #resetEmailForm input[type="email"]:focus {
+            outline: none;
+            border-color: #4287f5;
+        }
+
+        #resetEmailForm button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #resetEmailForm button[type="submit"] {
+            background: #4287f5;
+            color: white;
+        }
+
+        #resetEmailForm button[type="submit"]:hover {
+            background: #2d6ed9;
+        }
+
+        #cancelDialog {
+            background: #f1f1f1;
+            color: #333;
+        }
+
+        #cancelDialog:hover {
+            background: #e1e1e1;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .button-group button {
+            flex: 1;
+        }
+
+        /* Password requirements styles */
+        .password-requirements {
+            font-size: 0.8em;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .requirement {
+            margin: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .requirement::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .valid::before {
+            background-color: #4CAF50;
+        }
+
+        .invalid::before {
+            background-color: #f44336;
+        }
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="blueBg">
+            <div class="box signin">
+                <h2>Already have an account?</h2>
+                <button class="signinBtn">Sign in</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't have an account?</h2>
+                <button class="signupBtn">Sign up</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="form signinForm">
+                <form id="loginForm">
+                    <h3>Welcome again, Sign In to Updates Your Projects </h3>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                    <a href="#" class="forgot" id="forgotPassword">Forgot Password?</a>
+                    <p id="loginError" style="color: red;"></p>
+                </form>
+            </div>
+
+            <div class="form signupForm">
+                <form id="registerForm">
+                    <h3>Welcome,Please Sign Up to Continue</h3>
+                    <input type="text" id="registerUsername" placeholder="Username" required>
+                    <input type="email" id="registerEmail" placeholder="Email Address" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <div class="password-requirements">
+                        <div class="requirement" id="length">At least 8 characters</div>
+                        <div class="requirement" id="uppercase">At least one uppercase letter</div>
+                        <div class="requirement" id="lowercase">At least one lowercase letter</div>
+                        <div class="requirement" id="number">At least one number</div>
+                        <div class="requirement" id="special">At least one special character</div>
+                    </div>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <input type="submit" value="Register">
+                    <p id="registerError" style="color: red;"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="emailDialog">
+        <h3>Reset Password</h3>
+        <form id="resetEmailForm">
+            <input type="email" id="resetEmail" placeholder="Enter your email address" required>
+            <div class="button-group">
+                <button type="submit">Send Reset Link</button>
+                <button type="button" id="cancelDialog">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Link to external JavaScript -->
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

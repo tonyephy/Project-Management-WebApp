@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <div class="logo">
+                <span class="material-icons">bubble_chart</span>
+                <h2>ProjectHub</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <span class="material-icons">dashboard</span>
+                    <span>Dashboard</span>
+                </li>
+                <li>
+                    <span class="material-icons">assignment</span>
+                    <span>Projects</span>
+                </li>
+                <li>
+                    <span class="material-icons">people</span>
+                    <span>Team</span>
+                </li>
+                <li>
+                    <span class="material-icons">event</span>
+                    <span>Calendar</span>
+                </li>
+                <li>
+                    <span class="material-icons">chat</span>
+                    <span>Messages</span>
+                </li>
+                <li>
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </li>
+            </ul>
+            <button id="logoutBtn">
+                <span class="material-icons">logout</span>
+                <span>Logout</span>
+            </button>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <div class="search-bar">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <span class="material-icons">notifications</span>
+                    <div class="profile">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23666'/%3E%3Ctext x='20' y='25' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E" alt="Profile">
+                        <span>John Doe</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <section class="overview">
+                    <h2>Project Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #e3f2fd;">
+                                <span class="material-icons" style="color: #1976d2;">assignment</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Projects</h3>
+                                <p>24</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #e8f5e9;">
+                                <span class="material-icons" style="color: #388e3c;">check_circle</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Completed</h3>
+                                <p>16</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #fff3e0;">
+                                <span class="material-icons" style="color: #f57c00;">schedule</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>In Progress</h3>
+                                <p>8</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #fce4ec;">
+                                <span class="material-icons" style="color: #c2185b;">people</span>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Team Members</h3>
+                                <p>12</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-timeline">
+                    <h2>Recent Projects</h2>
+                    <div class="timeline-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Website Redesign</h3>
+                                <span class="badge in-progress">In Progress</span>
+                            </div>
+                            <p>Modernizing the company website with new features and responsive design.</p>
+                            <div class="project-footer">
+                                <div class="team-members">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23666'/%3E%3C/svg%3E" alt="Member">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23888'/%3E%3C/svg%3E" alt="Member">
+                                    <span>+3</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Mobile App Development</h3>
+                                <span class="badge completed">Completed</span>
+                            </div>
+                            <p>Cross-platform mobile application for customer engagement.</p>
+                            <div class="project-footer">
+                                <div class="team-members">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23666'/%3E%3C/svg%3E" alt="Member">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23888'/%3E%3C/svg%3E" alt="Member">
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="upcoming-tasks">
+                    <h2>Upcoming Tasks</h2>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="material-icons">assignment</span>
+                                <div>
+                                    <h4>Client Meeting</h4>
+                                    <p>Project discussion with new client</p>
+                                </div>
+                            </div>
+                            <span class="task-date">Tomorrow, 10:00 AM</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-info">
+                                <span class="material-icons">code</span>
+                                <div>
+                                    <h4>Code Review</h4>
+                                    <p>Review pull requests for the main project</p>
+                                </div>
+                            </div>
+                            <span class="task-date">Today, 2:00 PM</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCavF-n4glR_KFZ8f6AMrwHMR78CUliiEk",
+            authDomain: "modern-web-app-project.firebaseapp.com",
+            projectId: "modern-web-app-project",
+            storageBucket: "modern-web-app-project.firebasestorage.app",
+            messagingSenderId: "671541584713",
+            appId: "1:671541584713:web:c358012964887647137098",
+            measurementId: "G-Y0VVDM1PWW"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {
+                window.location.href = 'sign in.html';
+            }
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            signOut(auth).then(() => {
+                window.location.href = 'sign in.html';
+            }).catch((error) => {
+                console.error('Error signing out:', error);
+            });
+        });
+    </script>
+</body>
+</html>
